@@ -1,0 +1,123 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "ue-back-top",
+      "path": "./stories/UeBackTop.ts",
+      "description": "An example element.",
+      "attributes": [
+        {
+          "name": "animationIn",
+          "description": "Animation in.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "animationOut",
+          "description": "Animation out.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "threshold",
+          "description": "When to show element in px from top.\n\nLonger Description",
+          "type": "number",
+          "default": "200"
+        },
+        {
+          "name": "top",
+          "description": "Where to scroll to in px from top.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "smoothScroll",
+          "description": "Use smooth scroll or instant scroll.",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "hidden",
+          "description": "Use smooth scroll or instant scroll.",
+          "type": "boolean",
+          "default": "true"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "CSSResultGroup",
+          "default": "\"css`:host { background: blue;}`\""
+        },
+        {
+          "name": "animationIn",
+          "attribute": "animationIn",
+          "description": "Animation in.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "animationOut",
+          "attribute": "animationOut",
+          "description": "Animation out.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "threshold",
+          "attribute": "threshold",
+          "description": "When to show element in px from top.\n\nLonger Description",
+          "type": "number",
+          "default": "200"
+        },
+        {
+          "name": "top",
+          "attribute": "top",
+          "description": "Where to scroll to in px from top.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "smoothScroll",
+          "attribute": "smoothScroll",
+          "description": "Use smooth scroll or instant scroll.",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "hidden",
+          "attribute": "hidden",
+          "description": "Use smooth scroll or instant scroll.",
+          "type": "boolean",
+          "default": "true"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "This element has a slot"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--background",
+          "description": "Background Color."
+        },
+        {
+          "name": "--color",
+          "description": "Icon color."
+        }
+      ],
+      "cssParts": [
+        {
+          "name": "base",
+          "description": "The Base"
+        },
+        {
+          "name": "icon",
+          "description": "The icon"
+        }
+      ]
+    }
+  ]
+}
