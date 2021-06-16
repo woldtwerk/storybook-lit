@@ -10,7 +10,7 @@ import styles from './BackTop.scss'
  * @slot default - This element has a slot
  * @csspart base - The Base
  * @csspart icon - The icon
- * @cssprop --background - Background Color. 
+ * @cssprop --background - Background Color.
  * @cssprop --color - Icon color.
  */
 @customElement('back-top')

@@ -1,27 +1,37 @@
-import { Story, ArgsTable, Meta, Canvas, Title, Description } from '@storybook/addon-docs/blocks';
+import {
+  Story,
+  ArgsTable,
+  Meta,
+  Canvas,
+  Title,
+  Description,
+} from '@storybook/addon-docs/blocks'
 import { html, attr } from '@helper/lit'
 
-export const Template = (args) => html`<back-top ${attr(args)}></back-top>`;
+export const Template = (args) => html`<back-top ${attr(args)}></back-top>`
 
-<Meta 
-  title="Back Top/mdx" 
-  component={"back-top"}
-/>
+<Meta title="Back Top/mdx" component={'back-top'} />
 
 <Title />
 
 <Description />
 
 <Canvas withToolbar>
-  <Story args={{threshold: 0}} name="Default">{Template.bind({})}</Story>
+  <Story args={{ threshold: 0 }} name="Default">
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Default" />
 
 <Canvas withToolbar>
-  <Story name="Primary" args={{threshold: 0}}>{Template.bind({})}</Story>
+  <Story name="Primary" args={{ threshold: 0 }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <Canvas withToolbar>
-  <Story name="Secondary" args={{threshold: 0}}>{Template.bind({})}</Story>
+  <Story name="Secondary" args={{ threshold: 0 }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>

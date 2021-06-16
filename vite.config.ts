@@ -9,10 +9,10 @@ const disableInjectCssToHead = () => {
     name: 'return-partial',
     configResolved(resolvedConfig) {
       config = resolvedConfig
-      config.plugins.forEach(plugin => { 
+      config.plugins.forEach((plugin) => {
         if (plugin.name === 'vite:css-post') {
           const originalTransform = plugin.transform
-          plugin.transform =  async function(css, id) {
+          plugin.transform = async function (css, id) {
             return originalTransform(css, id, cssLangRE.test(id))
           }
         }
@@ -34,14 +34,9 @@ export default defineConfig({
   build: {
     manifest: true,
     rollupOptions: {
-      input: [
-        'src/index.ts',
-        'src/styles/index.scss'
-      ],
+      input: ['src/index.ts', 'src/styles/index.scss'],
       external: /^lit(-element)?/,
     },
   },
-  plugins: [
-    disableInjectCssToHead(),
-  ]
+  plugins: [disableInjectCssToHead()],
 })

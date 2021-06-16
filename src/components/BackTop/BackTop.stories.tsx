@@ -4,9 +4,10 @@ import { Story } from '@storybook/web-components'
 export default {
   title: 'Back Top/tsx',
   component: 'back-top',
-};
+}
 
-const Template: Story<Partial<any>> = (args) => html`<back-top ${attr(args)}></back-top>`
+const Template: Story<Partial<any>> = (args) =>
+  html`<back-top ${attr(args)}></back-top>`
 
 export const Primary = Template.bind({})
 Primary.args = {

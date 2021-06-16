@@ -1,10 +1,10 @@
-import { setCustomElements } from '@storybook/web-components';
-import customElements from '../custom-elements.json';
+import { setCustomElements } from '@storybook/web-components'
+import customElements from '../custom-elements.json'
 
-setCustomElements(customElements);
+setCustomElements(customElements)
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,

@@ -16,7 +16,6 @@
     "@typescript-eslint/parser": "^4.27.0",
     "babel-loader": "^8.2.2",
     "concurrently": "^6.2.0",
-    "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "lit-html": "^2.0.0-rc.3",
     "sass": "^1.35.1",
@@ -32,14 +31,16 @@
     "vite:build": "tsc && vite build",
     "storybook:dev": "start-storybook -p 6008 --ci --quiet",
     "storybook:build": "build-storybook",
-    "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore"
+    "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore --write"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "ignorePatterns": [
-      "*.config.js",
+      "*.js",
       "*.config.ts",
-      "*.stories.ts"
+      "*.stories.ts",
+      "*.stories.tsx",
+      "*.stories.mdx"
     ],
     "extends": [
       "@open-wc/eslint-config",
