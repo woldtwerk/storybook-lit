@@ -12,19 +12,3 @@ export const parameters = {
     },
   },
 }
-
-const generateStories = () => {
-  const storiesCtx = require.context('../stories', true, /\.stories\.(jsx|tsx|mdx)$/)
-  const litCtx = require.context('../stories', true, /\.(ts)$/)
-  const litRoutes = litCtx.keys()
-  const storyRoutes = storiesCtx.keys();
-
-  storyRoutes.forEach(storyRoute => {
-    // get Story object.
-    const _export = storiesCtx(storyRoute).default;
-
-    console.log(_export)
-  })
-}
-
-generateStories()

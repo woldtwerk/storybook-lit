@@ -12,7 +12,8 @@
     "@storybook/manager-webpack5": "^6.3.0-rc.7",
     "@storybook/web-components": "^6.3.0-rc.7",
     "babel-loader": "^8.2.2",
-    "lit-html": "^2.0.0-rc.3"
+    "lit-html": "^2.0.0-rc.3",
+    "vite": "^2.3.7"
   },
   "dependencies": {
     "lit": "^2.0.0-rc.2"

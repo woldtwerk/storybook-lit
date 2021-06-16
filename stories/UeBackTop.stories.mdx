@@ -1,7 +1,7 @@
 import { Story, ArgsTable, Meta, Canvas, Title, Description } from '@storybook/addon-docs/blocks';
-import { html } from 'lit-html';
+import { html, attr } from '@helper/lit'
 
-export const Template = (args) => html`<h1>hi</h1>`;
+export const Template = (args) => html`<h1 ${attr(args)}>${JSON.stringify(args)}</h1>`;
 
 <Meta 
   title="Example/mdx" 

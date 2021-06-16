@@ -1,4 +1,5 @@
-const { execSync } = require("child_process");
+const { execSync } = require('child_process');
+const { resolve } = require('path')
 
 module.exports = {
   stories: [
@@ -13,6 +14,7 @@ module.exports = {
     builder: "webpack5"
   },
   webpackFinal: (config) => {
+    config.resolve.alias['@helper'] = resolve(__dirname, '../src/helper'),
     config.plugins.push({
       apply: (compiler) => {
         compiler.hooks.compile.tap('wca', () => {
@@ -20,7 +22,7 @@ module.exports = {
           execSync('wca analyze "stories/**/*.{js,ts}" --outFiles custom-elements.json')
 
           if(config.mode === 'production') {
-            // vscode.
+            // web-component.html-data.json for vscode.
             execSync('wca analyze "stories/**/*.{js,ts}" --outFiles web-component.html-data.json --format vscode')
           }
         });
@@ -28,7 +30,6 @@ module.exports = {
     })
     config.watchOptions = {
       ignored: /^(?!.*stories\b).*$/,
-      // ignored: /.*\.(json)$/,
     }
     return config
   }
