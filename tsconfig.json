@@ -7,7 +7,7 @@
     // "sourceMap": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
-    "outDir": "./types",
+    "outDir": "./dist/types",
     "rootDir": "./src",
     "strict": true,
     "noUnusedLocals": true,
@@ -27,6 +27,6 @@
       "@helper/*": ["./src/helper/*"]
     }
   },
-  "include": ["./src/**/*.ts", "./stories/*"],
+  "include": ["./src/**/*"],
   "exclude": []
 }

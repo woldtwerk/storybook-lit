@@ -1,11 +1,11 @@
-import { LitElement, html, unsafeCSS, css } from 'lit'
+import { LitElement, html, unsafeCSS } from 'lit'
 import { state, property, customElement } from 'lit/decorators.js'
 import { unsafeSVG } from 'lit/directives/unsafe-svg'
-// import icon from './arrow-down.svg?raw'
-// import styles from './UeBackTop.scss'
+import icon from '../../assets/arrow-down.svg?raw'
+import styles from './BackTop.scss'
 
 /**
- * An example element.
+ * A floating Button that scrolls you back top.
  *
  * @slot default - This element has a slot
  * @csspart base - The Base
@@ -13,9 +13,9 @@ import { unsafeSVG } from 'lit/directives/unsafe-svg'
  * @cssprop --background - Background Color. 
  * @cssprop --color - Icon color.
  */
-@customElement('ue-back-top')
-export class UeBackTop extends LitElement {
-  static styles = css`:host { background: blue;}`
+@customElement('back-top')
+export class BackTop extends LitElement {
+  static styles = unsafeCSS(styles)
 
   /** Animation in. */
   @property() animationIn: string = ''
@@ -25,11 +25,7 @@ export class UeBackTop extends LitElement {
 
   /**
    * When to show element in px from top.
-   * 
-   * Longer Description
-   * @control range
-   * @optionsobj { min: 0, max: 200}
-   * @options {"options": ["abc", "def"]} */
+   */
   @property() threshold: number = 200
 
   /** Where to scroll to in px from top. */
@@ -119,10 +115,8 @@ export class UeBackTop extends LitElement {
         tabindex="0"
         part="base"
       >
-        <slot part="icon"> icons </slot>
+        <slot part="icon"> ${unsafeSVG(icon)} </slot>
       </div>
     `
   }
 }
-
-// register(module, 'my-element', UeBackTop)

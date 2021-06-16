@@ -19,6 +19,9 @@
     "lit": "^2.0.0-rc.2"
   },
   "scripts": {
+    "start": "concurrently -n storybook,vite -c magenta,blue 'yarn storybook' 'yarn dev'",
+    "dev": "vite",
+    "build": "tsc && vite build",
     "storybook": "start-storybook -p 6008 --ci",
     "build-storybook": "build-storybook"
   }

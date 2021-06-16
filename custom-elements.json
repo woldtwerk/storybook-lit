@@ -2,9 +2,9 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "ue-back-top",
-      "path": "./stories/UeBackTop.ts",
-      "description": "An example element.",
+      "name": "back-top",
+      "path": "./src/components/BackTop/BackTop.ts",
+      "description": "A floating Button that scrolls you back top.",
       "attributes": [
         {
           "name": "animationIn",
@@ -20,7 +20,7 @@
         },
         {
           "name": "threshold",
-          "description": "When to show element in px from top.\n\nLonger Description",
+          "description": "When to show element in px from top.",
           "type": "number",
           "default": "200"
         },
@@ -46,8 +46,8 @@
       "properties": [
         {
           "name": "styles",
-          "type": "CSSResultGroup",
-          "default": "\"css`:host { background: blue;}`\""
+          "type": "CSSResult",
+          "default": "\"unsafeCSS(styles)\""
         },
         {
           "name": "animationIn",
@@ -66,7 +66,7 @@
         {
           "name": "threshold",
           "attribute": "threshold",
-          "description": "When to show element in px from top.\n\nLonger Description",
+          "description": "When to show element in px from top.",
           "type": "number",
           "default": "200"
         },

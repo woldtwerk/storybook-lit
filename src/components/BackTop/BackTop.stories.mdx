@@ -1,11 +1,11 @@
 import { Story, ArgsTable, Meta, Canvas, Title, Description } from '@storybook/addon-docs/blocks';
 import { html, attr } from '@helper/lit'
 
-export const Template = (args) => html`<h1 ${attr(args)}>${JSON.stringify(args)}</h1>`;
+export const Template = (args) => html`<h1 ${attr(args)}>mdx</h1>`;
 
 <Meta 
-  title="Example/mdx" 
-  component={"ue-back-top"}
+  title="Back Top/mdx" 
+  component={"back-top"}
 />
 
 <Title />
@@ -17,11 +17,6 @@ export const Template = (args) => html`<h1 ${attr(args)}>${JSON.stringify(args)}
 </Canvas>
 
 <ArgsTable story="Default" />
-
-## haladsd
-asdasdadlsad
-sd
-aadsd
 
 <Canvas withToolbar>
   <Story name="Primary" args={{threshold: 0}}>{Template.bind({})}</Story>

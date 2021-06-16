@@ -1,0 +1,53 @@
+/** 
+* @prop --background: Background Color. 
+* @prop --color: Icon color.
+*/
+:host {
+  --background: var(--ue-color-primary);
+  --color: var(--ue-color-secondary);
+  --dimension: 4rem;
+  --rounded: 50%;
+  --animation-duration: 500ms;
+  --animation-in: ue-animation-fade-in;
+  --animation-out: ue-animation-fade-out;
+}
+
+:host {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  animation-fill-mode: both;
+  opacity: 0;
+  pointer-events: none;
+  animation-duration: var(--animation-duration);
+}
+
+:host([hidden].animate) {
+  display: block;
+  opacity: 0;
+  animation-name: var(--animation-out);
+}
+
+:host(.animate) {
+  opacity: 1;
+  pointer-events: all;
+  animation-name: var(--animation-in);
+}
+
+div {
+  border-radius: var(--rounded);
+  background: var(--background);
+  background: var(--background);
+  width: var(--dimension);
+  height: var(--dimension);
+  color: var(--color);
+  display: grid;
+  place-items: center;
+  transition: all var(--animation-duration);
+
+  &:is(:hover, :focus-visible) {
+    outline: 0;
+    box-shadow: var(--color) 0 0 5px 0;
+  }
+}

@@ -3,8 +3,7 @@ const { resolve } = require('path')
 
 module.exports = {
   stories: [
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/**/*.stories.@(js|jsx|ts|tsx|mdx)"
   ],
   addons: [
     "@storybook/addon-links",
@@ -19,11 +18,11 @@ module.exports = {
       apply: (compiler) => {
         compiler.hooks.compile.tap('wca', () => {
           // custom-elements.json.
-          execSync('wca analyze "stories/**/*.{js,ts}" --outFiles custom-elements.json')
+          execSync('wca analyze "src/components/**/*.ts" --outFiles custom-elements.json')
 
           if(config.mode === 'production') {
             // web-component.html-data.json for vscode.
-            execSync('wca analyze "stories/**/*.{js,ts}" --outFiles web-component.html-data.json --format vscode')
+            execSync('wca analyze "src/components/**/*.ts" --outFiles web-component.html-data.json --format vscode')
           }
         });
       }
