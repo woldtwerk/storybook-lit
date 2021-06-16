@@ -29,8 +29,10 @@
     "dev": "concurrently -n storybook,vite -c magenta,blue 'yarn storybook:dev' 'yarn vite:dev'",
     "vite:dev": "vite",
     "vite:build": "tsc && vite build",
-    "storybook:dev": "start-storybook -p 6008 --ci --quiet",
+    "storybook:dev": "start-storybook -p 6008 --ci ",
     "storybook:build": "build-storybook",
+    "wca:ce": "wca analyze \"src/components/**/*.ts\" --outFiles custom-elements.json",
+    "wca:vscode": "wca analyze \"src/components/**/*.ts\" --outFiles .vscode/web-component.html-data.json --format vscode",
     "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore --write"
   },
   "eslintConfig": {

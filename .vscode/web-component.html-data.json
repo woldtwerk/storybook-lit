@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "tags": [
+    {
+      "name": "back-top",
+      "description": "A floating Button that scrolls you back top.\n\nSlots:\n\n  * `default` {} - This element has a slot\n\nAttributes:\n\n  * `animationIn` {`string`} - Animation in.\n\n  * `animationOut` {`string`} - Animation out.\n\n  * `threshold` {`number`} - When to show element in px from top.\n\n  * `top` {`number`} - Where to scroll to in px from top.\n\n  * `smoothScroll` {`boolean`} - Use smooth scroll or instant scroll.\n\n  * `hidden` {`boolean`} - Use smooth scroll or instant scroll.\n\nProperties:\n\n  * `styles` {`CSSResult`} - \n\n  * `animationIn` {`string`} - Animation in.\n\n  * `animationOut` {`string`} - Animation out.\n\n  * `threshold` {`number`} - When to show element in px from top.\n\n  * `top` {`number`} - Where to scroll to in px from top.\n\n  * `smoothScroll` {`boolean`} - Use smooth scroll or instant scroll.\n\n  * `hidden` {`boolean`} - Use smooth scroll or instant scroll.\n\n  * `scrollOptions` - Build scroll settings object.\n\n  * `_onScroll` - Use Arrow function, thus this is this component and not window",
+      "attributes": [
+        {
+          "name": "animationIn",
+          "description": "`animationIn` {`string`} - Animation in.\n\nProperty: animationIn\n\nDefault: "
+        },
+        {
+          "name": "animationOut",
+          "description": "`animationOut` {`string`} - Animation out.\n\nProperty: animationOut\n\nDefault: "
+        },
+        {
+          "name": "threshold",
+          "description": "`threshold` {`number`} - When to show element in px from top.\n\nProperty: threshold\n\nDefault: 200"
+        },
+        {
+          "name": "top",
+          "description": "`top` {`number`} - Where to scroll to in px from top.\n\nProperty: top\n\nDefault: 0"
+        },
+        {
+          "name": "smoothScroll",
+          "description": "`smoothScroll` {`boolean`} - Use smooth scroll or instant scroll.\n\nProperty: smoothScroll\n\nDefault: true",
+          "valueSet": "v"
+        },
+        {
+          "name": "hidden",
+          "description": "`hidden` {`boolean`} - Use smooth scroll or instant scroll.\n\nProperty: hidden\n\nDefault: true",
+          "valueSet": "v"
+        }
+      ]
+    }
+  ],
+  "globalAttributes": [],
+  "valueSets": []
+}

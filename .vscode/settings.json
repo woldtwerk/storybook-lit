@@ -1,3 +1,7 @@
 {
-  "html.customData": ["../custom-elements.json"]
+  "html.customData": ["./.vscode/web-component.html-data.json"],
+  "files.exclude": {
+    "**/storybook-static": true,
+    "yarn-error.log": true
+  }
 }
