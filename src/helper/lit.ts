@@ -1,4 +1,5 @@
 import { unsafeStatic } from 'lit/static-html.js'
+
 export { html } from 'lit/static-html.js'
 
 export const attr = (args: any) =>

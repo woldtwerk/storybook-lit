@@ -32,10 +32,6 @@ const disableInjectCssToHead = () => {
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    // lib: {
-    //   entry: 'src/index.ts',
-    //   formats: ['es']
-    // },
     manifest: true,
     rollupOptions: {
       input: [
@@ -45,7 +41,7 @@ export default defineConfig({
       external: /^lit(-element)?/,
     },
   },
-  // plugins: [
-  //   disableInjectCssToHead(),
-  // ]
+  plugins: [
+    disableInjectCssToHead(),
+  ]
 })

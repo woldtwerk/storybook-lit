@@ -6,7 +6,7 @@ export default {
   component: 'back-top',
 };
 
-const Template: Story<Partial<any>> = (args) => html`<h1 ${attr(args)}>tsx</h1>`
+const Template: Story<Partial<any>> = (args) => html`<back-top ${attr(args)}></back-top>`
 
 export const Primary = Template.bind({})
 Primary.args = {
