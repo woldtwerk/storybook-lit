@@ -6,7 +6,7 @@ import {
   Title,
   Description,
 } from '@storybook/addon-docs/blocks'
-import { html, attr } from '@helper/lit'
+import { html, attr } from '@app/helper/lit'
 
 export const Template = (args) => html`<back-top ${attr(args)}></back-top>`
 
@@ -17,7 +17,7 @@ export const Template = (args) => html`<back-top ${attr(args)}></back-top>`
 <Description />
 
 <Canvas withToolbar>
-  <Story args={{ threshold: 0 }} name="Default">
+  <Story args={{ threshold: 0 }} name="Default" inline={false}>
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -25,13 +25,13 @@ export const Template = (args) => html`<back-top ${attr(args)}></back-top>`
 <ArgsTable story="Default" />
 
 <Canvas withToolbar>
-  <Story name="Primary" args={{ threshold: 0 }}>
+  <Story name="Primary" args={{ threshold: 0 }} inline={false}>
     {Template.bind({})}
   </Story>
 </Canvas>
 
 <Canvas withToolbar>
-  <Story name="Secondary" args={{ threshold: 0 }}>
+  <Story name="Secondary" args={{ threshold: 0 }} inline={false}>
     {Template.bind({})}
   </Story>
 </Canvas>

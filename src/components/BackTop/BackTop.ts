@@ -115,7 +115,7 @@ export class BackTop extends LitElement {
         tabindex="0"
         part="base"
       >
-        <slot part="icon"> ${unsafeSVG(icon)} </slot>
+        <slot part="icon">${unsafeSVG(icon)}</slot>
       </div>
     `
   }

@@ -1,5 +1,4 @@
 const { execSync } = require('child_process')
-const { resolve } = require('path')
 
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
@@ -8,7 +7,6 @@ module.exports = {
     builder: 'webpack5',
   },
   webpackFinal: (config) => {
-    config.resolve.alias['@helper'] = resolve(__dirname, '../src/helper')
     config.plugins.push({
       apply: (compiler) => {
         compiler.hooks.compile.tap('wca', () => {

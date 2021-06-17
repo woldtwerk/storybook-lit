@@ -1,7 +1,14 @@
 {
-  "html.customData": ["./.vscode/web-component.html-data.json"],
+  "html.customData": [
+    "./.vscode/web-component.html-data.json",
+  ],
   "files.exclude": {
     "**/storybook-static": true,
-    "yarn-error.log": true
-  }
+    "yarn-error.log": true,
+    "yarn.lock": true,
+    "node_modules": true,
+  },
+  "search.exclude": {
+    "node_modules": true,
+  },
 }

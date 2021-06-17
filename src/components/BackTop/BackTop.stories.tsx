@@ -1,4 +1,4 @@
-import { html, attr } from '@helper/lit'
+import { html, attr } from '@app/helper/lit'
 import { Story } from '@storybook/web-components'
 
 export default {
