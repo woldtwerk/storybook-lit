@@ -2,6 +2,8 @@ storybook-static
 yarn-error.log
 node_modules
 .yarn/*
+# cache used for 0 installs
+!.yarn/cache
 !.yarn/patches
 !.yarn/releases
 !.yarn/plugins
