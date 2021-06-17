@@ -1,14 +1,22 @@
 {
   "html.customData": [
-    "./.vscode/web-component.html-data.json",
+    "./.vscode/web-component.html-data.json"
   ],
   "files.exclude": {
     "**/storybook-static": true,
     "yarn-error.log": true,
     "yarn.lock": true,
+    ".yarn": true,
+    ".yarnrc.yml": true,
+    ".pnp.js": true,
     "node_modules": true,
   },
   "search.exclude": {
     "node_modules": true,
+    "**/.yarn": true,
+    "**/.pnp.*": true
   },
+  "eslint.nodePath": ".yarn/sdks",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
